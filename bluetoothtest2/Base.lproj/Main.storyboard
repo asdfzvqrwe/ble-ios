@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mlU-0v-UFX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bluetoothtest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bl5-Tw-lSC">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_sejin_logo_1" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-zK-6um">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="eNy-7J-egT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_sejin_logo_5" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-qg-3TA">
+                                        <rect key="frame" x="0.0" y="150" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="M49-0H-2dP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="448-y6-R52"/>
+                                    <constraint firstAttribute="width" constant="200" id="PHB-nP-xgL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bl5-Tw-lSC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="2fM-2f-74D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bl5-Tw-lSC" secondAttribute="bottom" constant="314" id="Vj2-71-4pv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bl5-Tw-lSC" secondAttribute="trailing" constant="107" id="qe9-GW-ikD"/>
+                            <constraint firstItem="bl5-Tw-lSC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="yPN-7r-XrK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RoP-I2-o49">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="rYz-kv-vV7">
+                            <connections>
+                                <segue destination="iOb-dL-a7S" kind="show" id="npb-OR-ZSU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="88.392857142857139"/>
+        </scene>
+        <!--Side Menu Table View Controller-->
+        <scene sceneID="7ps-kE-v6e">
+            <objects>
+                <tableViewController id="Zxl-An-PCm" customClass="SideMenuTableViewController" customModule="bluetoothtest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gWk-6t-9V8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="datacell" id="Rdi-pQ-hXV" customClass="SideMenuTableViewCell" customModule="bluetoothtest2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rdi-pQ-hXV" id="fP3-tp-QVv">
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpH-RH-amX">
+                                            <rect key="frame" x="30" y="17" width="42" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="BpH-RH-amX" secondAttribute="bottom" constant="6" id="1QF-SR-btK"/>
+                                        <constraint firstItem="BpH-RH-amX" firstAttribute="top" secondItem="fP3-tp-QVv" secondAttribute="topMargin" constant="6" id="fBV-Hs-hgS"/>
+                                        <constraint firstItem="BpH-RH-amX" firstAttribute="leading" secondItem="fP3-tp-QVv" secondAttribute="leadingMargin" constant="10" id="jOz-Hn-DXp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="column1TextLabel" destination="BpH-RH-amX" id="6ss-xz-imJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Zxl-An-PCm" id="fsI-6X-poe"/>
+                            <outlet property="delegate" destination="Zxl-An-PCm" id="nCA-nw-0JX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Cxo-AR-hLE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egL-yY-yUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673.913043478261" y="87.723214285714278"/>
+        </scene>
+        <!--Button View Controller-->
+        <scene sceneID="e8K-Cs-emf">
+            <objects>
+                <viewController storyboardIdentifier="ButtonViewController" id="INp-8b-PMi" customClass="ButtonViewController" customModule="bluetoothtest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GaZ-iB-4ZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="E83-pk-NdB">
+                                <rect key="frame" x="52" y="128" width="310" height="640"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G6k-cX-BIl">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-us-OEw">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="K19-bn-0EN"/>
+                                                    <constraint firstAttribute="height" constant="70" id="rjM-IK-Xtw"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="GAIN">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test1WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="dSo-8U-AsH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vua-wg-L6U">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Afo-xb-MNF"/>
+                                                    <constraint firstAttribute="height" constant="70" id="HDf-rs-HGz"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="HPF">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test2WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="QMc-Rb-aag"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUL-6p-bG0">
+                                                <rect key="frame" x="160" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Nat-Js-em4"/>
+                                                    <constraint firstAttribute="width" constant="70" id="VtS-WY-yKq"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="LPF">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test3WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="sVB-LZ-Euj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGx-4N-Yxy">
+                                                <rect key="frame" x="240" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Ktn-GJ-eDh"/>
+                                                    <constraint firstAttribute="height" constant="70" id="NQ5-hF-bPu"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="FMODE">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test4WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="q9c-bi-9cb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehg-Sj-X1O">
+                                        <rect key="frame" x="0.0" y="95" width="310" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huv-bn-ElP">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="VCc-u7-JFe"/>
+                                                    <constraint firstAttribute="height" constant="70" id="gIz-0c-Yo5"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="RMODE">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test5WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="axf-WA-wZ2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7j-Bq-WkJ">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="TA8-Bz-a91"/>
+                                                    <constraint firstAttribute="width" constant="70" id="TMB-Yx-Mno"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="SUB GAIN">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test6WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="AlV-zv-bsr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUZ-Bv-b81">
+                                                <rect key="frame" x="160" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="YKH-Kr-Zl5"/>
+                                                    <constraint firstAttribute="width" constant="70" id="hyY-4o-VLg"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="SUB LPF">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test7WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="kJs-h6-mgT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yc-er-c3c">
+                                                <rect key="frame" x="240" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="JD3-nt-5NQ"/>
+                                                    <constraint firstAttribute="width" constant="70" id="d4f-1E-AGg"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="SUB SONIC">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test8WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="MPN-Q2-Ozz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zoe-Kv-lVx">
+                                        <rect key="frame" x="0.0" y="190" width="310" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-pv-OxX">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="MUZ-x0-OY9"/>
+                                                    <constraint firstAttribute="height" constant="70" id="UDs-xs-ovJ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="BASS BOOST">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test9WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="AVO-6H-JDK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ig-Pq-i5Y">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="3iP-md-gIU"/>
+                                                    <constraint firstAttribute="height" constant="70" id="lcc-5Y-jbw"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="SUB PHASE">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test10WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="mmR-DP-6ZN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaW-ax-6H7">
+                                                <rect key="frame" x="160" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="OpR-il-ejQ"/>
+                                                    <constraint firstAttribute="height" constant="70" id="yqR-XG-qlh"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="ENTER">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test11WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="iYe-eA-KJU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7S-PJ-JI6">
+                                                <rect key="frame" x="240" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="L3e-Sp-fcl"/>
+                                                    <constraint firstAttribute="width" constant="70" id="ScC-SH-PZ5"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="ENC DN">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test12WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="nPR-zV-kO5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lGu-sT-59K">
+                                        <rect key="frame" x="0.0" y="285" width="310" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZU-Wb-c6d">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="1Kw-mo-Vea"/>
+                                                    <constraint firstAttribute="height" constant="70" id="c23-66-8WO"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="ENC UP">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test13WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="ywg-5G-mWI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-KH-mxX">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="2v5-XW-x9p"/>
+                                                    <constraint firstAttribute="width" constant="70" id="LdF-bs-hTz"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="TUNE DN">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test14WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="a7v-CG-iY6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDK-om-AUP">
+                                                <rect key="frame" x="160" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Ikn-2d-g0x"/>
+                                                    <constraint firstAttribute="height" constant="70" id="n0i-em-53P"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="BAND">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test15WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="3Np-gP-WV5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIu-oD-NRN">
+                                                <rect key="frame" x="240" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="hMV-c0-gOn"/>
+                                                    <constraint firstAttribute="height" constant="70" id="oh8-ks-b1U"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="TUNE UP">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test16WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="cZ1-dv-LYn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tng-Dh-Rfx">
+                                        <rect key="frame" x="0.0" y="380" width="310" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKD-eD-dZm">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="8Uw-8c-pvX"/>
+                                                    <constraint firstAttribute="width" constant="70" id="X77-Kd-nhi"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="MEDIA">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test17WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="DJa-Qi-1mq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jus-Hd-7Q6">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="UR7-bt-pC2"/>
+                                                    <constraint firstAttribute="height" constant="70" id="bjX-81-AYX"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="AS">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test18WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="9YR-zx-OV4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoz-rO-eqm">
+                                                <rect key="frame" x="160" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="3vm-Dg-6qV"/>
+                                                    <constraint firstAttribute="height" constant="70" id="tyF-rD-l5A"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="PS">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test19WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="dHF-nH-qIv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYE-k6-UB6">
+                                                <rect key="frame" x="240" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="074-Ve-RZ2"/>
+                                                    <constraint firstAttribute="height" constant="70" id="CzE-Dt-6i9"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="P1">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test20WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="OcD-TN-ROZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j4d-Cg-3H7">
+                                        <rect key="frame" x="0.0" y="475" width="310" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaL-5B-XtH">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="LOQ-yj-8n9"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Zqu-fo-4Hx"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="P2">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test21WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="YoO-Ue-ywh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV8-QN-MfB">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="RUA-Ok-Jcb"/>
+                                                    <constraint firstAttribute="height" constant="70" id="SeB-dv-lPw"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="P3">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test22WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="Sxv-Tu-Ap7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycu-rX-BnQ">
+                                                <rect key="frame" x="160" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="NGK-is-X5R"/>
+                                                    <constraint firstAttribute="width" constant="70" id="tmX-MX-RYc"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="P4">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test23WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="r6f-nK-v9L"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shz-ET-OkH">
+                                                <rect key="frame" x="240" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="KbB-Xh-q1u"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Q4A-Me-b3x"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="P5">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test24WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="zuq-mZ-2yI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r8H-X6-ZJs">
+                                        <rect key="frame" x="0.0" y="570" width="310" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mh-QZ-3ba">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="PW5-kT-Occ"/>
+                                                    <constraint firstAttribute="width" constant="70" id="zWQ-LP-Lbf"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="P6">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11.5" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Test25WithSender:" destination="INp-8b-PMi" eventType="touchUpInside" id="l6l-pP-gCD"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Big-a8-UP0">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="TDP-JG-XML"/>
+                                                    <constraint firstAttribute="width" constant="70" id="WMz-Fy-9cL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelString" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdT-hL-24B">
+                                                <rect key="frame" x="160" y="0.0" width="150" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J6O-W8-uY7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E83-pk-NdB" firstAttribute="centerX" secondItem="GaZ-iB-4ZM" secondAttribute="centerX" id="Ige-ph-RQz"/>
+                            <constraint firstItem="E83-pk-NdB" firstAttribute="centerY" secondItem="GaZ-iB-4ZM" secondAttribute="centerY" id="NBA-rb-D0p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A66-lb-6D4"/>
+                    <connections>
+                        <outlet property="labelString1" destination="HdT-hL-24B" id="j7G-Pu-R4P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiQ-LN-J5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3582.608695652174" y="87.723214285714278"/>
+        </scene>
+        <!--Custom Side Menu Navigation-->
+        <scene sceneID="77P-GP-u41">
+            <objects>
+                <navigationController id="iOb-dL-a7S" customClass="CustomSideMenuNavigation" customModule="bluetoothtest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5dX-Fm-nUn"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kXf-a3-dZ8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Zxl-An-PCm" kind="relationship" relationship="rootViewController" id="a3y-MM-bec"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vax-Xh-rqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M2T-Oz-3Qv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mlU-0v-UFX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7vN-H4-Lds">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fqu-is-fRq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlg-e8-ERv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="new_sejin_logo_1" width="220" height="322"/>
+        <image name="new_sejin_logo_5" width="414" height="119"/>
+        <image name="text.justify" catalog="system" width="128" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
